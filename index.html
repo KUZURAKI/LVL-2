@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/index.css" />
+    <title>Форма</title>
+  </head>
+  <body>
+    <!-- Я ЗАМЕТИЛ, ЧТО ПАРОЛЬ ТОЛЬКО 1 РАЗ ЗАПРАШИВАЕТСЯ.
+    А ОБЫЧНО ЕГО ПРОСЯТ ВВЕСТИ 2 РАЗА.
+    ТАК ЧТО Я ДОБАВИЛ САМ ЕЩЕ ПОДТВЕРЖДЕНИЕ ПАРОЛЯ. -->
+
+    <form
+      action="#"
+      method="post"
+      enctype="multipart/form-data"
+      class="formInfo"
+    >
+      <div class="container">
+        <fieldset>
+          <legend>Логин <span>*</span></legend>
+          <input type="text" name="login" placeholder="К примеру: ivan" />
+        </fieldset>
+
+        <fieldset class="passwordField">
+          <legend>Пароль <span>*</span></legend>
+          <input
+            type="password"
+            name="password"
+            placeholder="К примеру: 123"
+            class="password-input"
+          />
+          <span class="togglePassword"
+            ><img src="assets/img/eye.png" alt=""
+          /></span>
+        </fieldset>
+
+        <fieldset class="passwordField">
+          <legend>Подтвердите пароль <span>*</span></legend>
+          <input
+            type="password"
+            name="passwordConfirm"
+            placeholder="Повторите пароль"
+            class="password-input"
+          />
+          <span class="togglePassword"
+            ><img src="assets/img/eye.png" alt=""
+          /></span>
+        </fieldset>
+
+        <fieldset>
+          <legend>Ф.И.О. <span>*</span></legend>
+          <input
+            type="text"
+            name="fullName"
+            placeholder="К примеру: Иванович Иван Иванов"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>E-Mail <span>*</span></legend>
+          <input
+            type="text"
+            name="email"
+            placeholder="К примеру: ivan@gmail.com"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Телефон <span>*</span></legend>
+          <input
+            type="text"
+            name="phone"
+            placeholder="К примеру: 8 (***) ***-**-**"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>О себе <span>*</span></legend>
+          <textarea
+            id="textarea"
+            name="about"
+            rows="2"
+            cols="25"
+            placeholder="К примеру: Я занимаюсь спортом"
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Аватар <span>*</span></legend>
+          <input type="file" id="fileInput" name="avatar" />
+        </fieldset>
+
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
